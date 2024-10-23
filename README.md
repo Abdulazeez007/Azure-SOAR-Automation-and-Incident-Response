@@ -1,6 +1,8 @@
 
 # 🚨 **Advanced Incident Detection and Response Using Microsoft Security Stack**
 
+ ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6037580277431255552_w.jpg)
+
 ## 📄 **Project Overview**  
 In preparation for the Microsoft SC-200 exam, I simulated a real-world attack scenario using a Mythic C2 server and conducted thorough detection, investigation, and response activities using Microsoft Sentinel and Microsoft Defender for Endpoint. This project involved simulating multi-staged cyber attacks, analyzing threat indicators, and automating responses to enhance incident management and improve the security posture of the environment.
 
@@ -263,12 +265,14 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 ## 4️⃣ **Incident Investigation and Remediation**  
 
 ### 4.1 **📝 Verification and Initial Investigation**  
-- Received an alert for Mythic C2 detection.  
+#### Received an alert for Mythic C2 detection.
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6037580277431255549_w.jpg)
+  
 - Investigated the alert in Microsoft Sentinel, reviewing evidence such as:  
    - Suspicious file `svcanonymous.exe`.  
    - Mode of entry (brute-force attack).  
    - IPs involved in the attack.  
-🖼️ [Insert screenshots of Sentinel incident dashboard and evidence collection]
+![SOC]()
 
 ---
 
