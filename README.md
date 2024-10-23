@@ -1,6 +1,3 @@
-Sure! Here's a revised version of your project overview, using professional emojis to enhance readability and clarity:
-
----
 
 # **Advanced Incident Detection and Response Using Microsoft Security Stack**
 
@@ -133,5 +130,3 @@ This project provided invaluable hands-on experience in managing advanced threat
 📚 **Microsoft Defender for Endpoint:** MDE Documentation  
 
 ---
-
-Let me know if you would like further adjustments!
