@@ -54,6 +54,131 @@ This project was undertaken to simulate advanced cyber threats using the Mythic 
 - Deployed a decoy file named AdminPass.txt in the target VM for threat detection.  
 🖼️ [Insert screenshots of Mythic C2 configuration, VM setup, and decoy file deployment]
 
+Here are the steps to **Deploy a Mythic Command and Control Server** 🚀:
+
+### 1️⃣ Choose Your Cloud Provider (Azure or Vultr Example)
+- Head to your chosen cloud provider.
+- For this guide, we're using **Vultr**.
+- Deploy a new server by selecting **Deploy New Server**.
+
+**Server Specifications**:
+- **Cloud Compute (Shared CPU)**
+- **Location**: London 🇬🇧
+- **OS**: Ubuntu 22.04 LTS 🐧
+- **Specs**: 2 vCPUs, 4GB RAM (crucial for smooth operation).
+- **Storage**: 80GB SSD 💾
+- Uncheck **Auto Backups** and **IPv6**.
+
+📌 **Tip**: You can name the server as you like. Once configured, hit **Deploy Now** and wait for the server to spin up.
+
+---
+
+### 2️⃣ Connect to Your Server 🔐
+- Once the server is up, SSH into it via **PowerShell** (Windows) or your terminal (Linux/Mac).
+  
+```bash
+ssh root@<your-server-ip>
+```
+- Enter the password found in your Vultr console. Now, you’re connected!
+
+---
+
+### 3️⃣ Update & Upgrade Your Server 🔄
+- Run these commands to ensure your system is fully updated:
+
+```bash
+apt-get update && apt-get upgrade -y
+```
+
+---
+
+### 4️⃣ Install Docker Compose & Make ⚙️
+- Install **Docker Compose**:
+
+```bash
+apt install docker-compose
+```
+
+- Install **Make**:
+
+```bash
+apt install make
+```
+
+---
+
+### 5️⃣ Clone the Mythic Repository 📁
+- Clone Mythic from GitHub:
+
+```bash
+git clone https://github.com/its-a-feature/Mythic
+```
+
+- Navigate to the Mythic directory:
+
+```bash
+cd Mythic
+```
+
+- Run the installation script:
+
+```bash
+./install_docker_ubuntu.sh
+```
+
+- After installation, restart Docker and check its status:
+
+```bash
+systemctl restart docker
+systemctl status docker
+```
+
+---
+
+### 6️⃣ Start Mythic 💻
+- To start Mythic, run:
+
+```bash
+make
+```
+
+- Start the Mythic Command-Line Interface (CLI):
+
+```bash
+./mythic-cli start
+```
+
+---
+
+### 7️⃣ Configure Your Firewall 🔒
+- Head back to **Vultr** to set up a firewall.
+- Create a **Firewall Group** and allow only trusted IPs (like your own).
+
+---
+
+### 8️⃣ Access the Mythic Web GUI 🌐
+- Open your browser and navigate to the Mythic Web GUI:
+
+```url
+https://<your-mythic-ip>:7443
+```
+
+- The default username is **mythic_admin**. To get the password:
+
+```bash
+ls -la
+cat .env
+```
+
+- Look for `MYTHIC_ADMIN_PASSWORD=` in the output and use it to log in!
+
+---
+
+### ✅ Mythic Overview
+Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agents, profiles, and more.
+
+📅 **Next Steps**: Explore your new Mythic C2 setup!
+
 ---
 
 ### 2.2 **🔑 Brute-Force Attack Initiation**  
