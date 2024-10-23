@@ -218,9 +218,10 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 ---
 
 ### 2.6 **📥 File Exfiltration**  
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6010098396611854211_w.jpg)
 - Located the decoy file `AdminPass.txt` on the target VM.  
 - Successfully exfiltrated the file back to the attacker’s Mythic server, simulating data theft.  
-🖼️ [Insert screenshots of file exfiltration process]
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6041792321793671784_w.jpg)
 
 ---
 
@@ -231,23 +232,26 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
    - Process creation events (4688) for commands like `powershell.exe` and `cmd.exe`.  
    - Network connection events (5156) indicating potential C2 activities.  
 - Configured Sentinel to trigger alerts for these activities.  
-🖼️ [Insert screenshots of analytics rule configuration in Microsoft Sentinel]
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570391_w.jpg)
 
 ---
 
 ### 3.2 **👥 User & Group Management**  
-- Created user accounts and organized them into a SecOps Group for incident management.  
+- Created user accounts and organized them into a SecOps Group for incident management.
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570372_w.jpg)
+  
 - Implemented role-based access control (RBAC) to assign the Microsoft Sentinel Contributor role to the SOC Team Lead.  
-🖼️ [Insert screenshots of user and group management in Azure AD]
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570387_w.jpg)
 
 ---
 
 ### 3.3 **🤖 Automation & Incident Response**  
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570390_w.jpg)
 - Built an automation rule in Sentinel to:  
    - Trigger high-priority alerts.  
    - Assign incidents to the SOC Team Lead.  
    - Run a playbook that sends email notifications to the SOC Lead and SOC Manager.  
-🖼️ [Insert screenshots of automation rules and playbook configuration]
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570393_w.jpg)
 
 ---
 
