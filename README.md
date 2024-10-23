@@ -54,7 +54,7 @@ This project was undertaken to simulate advanced cyber threats using the Mythic 
 - Deployed a decoy file named AdminPass.txt in the target VM for threat detection.  
 🖼️ [Insert screenshots of Mythic C2 configuration, VM setup, and decoy file deployment]
 
-Here are the steps to **Deploy a Mythic Command and Control Server** 🚀:
+### Here are the steps to Deploy a Mythic Command and Control Server 🚀:
 
 ### 1️⃣ Choose Your Cloud Provider (Azure or Vultr Example)
 - Head to your chosen cloud provider.
