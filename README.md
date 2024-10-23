@@ -52,7 +52,7 @@ This project was undertaken to simulate advanced cyber threats using the Mythic 
 - Onboarded the VM to Microsoft Defender for Endpoint using Intune.  
 - Configured firewall settings to allow all inbound network traffic to facilitate the simulation.  
 - Deployed a decoy file named AdminPass.txt in the target VM for threat detection.  
-🖼️ ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570396_w.jpg)
+
 
 ## Here are the steps to Deploy a Mythic Command and Control Server 🚀:
 
@@ -172,6 +172,7 @@ cat .env
 
 - Look for `MYTHIC_ADMIN_PASSWORD=` in the output and use it to log in!
 
+ ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570396_w.jpg)
 ---
 
 ### ✅ Mythic Overview
@@ -182,24 +183,29 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 ---
 
 ### 2.2 **🔑 Brute-Force Attack Initiation**  
+
+ ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Mapping-a-Simulated-Attack-Path/photo_6010098396611854206_w.jpg)
 - Used a Kali Linux machine to initiate a brute-force attack targeting the Windows VM's RDP using a custom wordlist (brute.txt).  
 - Successfully cracked the credentials and accessed the target VM via XFREERDP.  
-🖼️ [Insert screenshots of Kali Linux brute-force attack commands and successful login]
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986956_y.jpg)
 
 ---
 
 ### 2.3 **🛡️ Defense Evasion**  
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Mapping-a-Simulated-Attack-Path/photo_6010098396611854208_w.jpg)
 - Disabled Windows Security features on the compromised VM to avoid detection.  
-- Whitelisted the path `C:\Users\auroravm\Downloads` to evade antivirus scans.  
-🖼️ [Insert screenshots of disabled Windows Security and whitelisting process]
+- Whitelisted the path `C:\Users\auroravm\Downloads` to evade antivirus scans.
+
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986970_w.jpg)
 
 ---
 
-### 2.4 **💻 Payload Creation and Deployment**  
+### 2.4 **💻 Payload Creation Deployment and Execution**  
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6010098396611854209_w.jpg)
 - Generated a payload named `svcanonymous.exe` using Mythic C2, designed to establish a secure connection back to the C2 server.  
 - Downloaded the payload onto the target VM’s whitelisted path.  
 - Executed the payload using PowerShell IEX to activate the C2 connection.  
-🖼️ [Insert screenshots of payload creation and PowerShell command execution]
+  ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986973_w.jpg)
 
 ---
 
