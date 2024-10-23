@@ -204,15 +204,16 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6010098396611854209_w.jpg)
 - Generated a payload named `svcanonymous.exe` using Mythic C2, designed to establish a secure connection back to the C2 server.  
 - Downloaded the payload onto the target VM’s whitelisted path.  
-- Executed the payload using PowerShell IEX to activate the C2 connection.  
   ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986973_w.jpg)
-
+- Executed the payload using PowerShell IEX to activate the C2 connection. 
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986974_w.jpg)
 ---
 
 ### 2.5 **📡 Command and Control (C2) Operation**  
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6010098396611854210_w.jpg)
 - Established a C2 connection between the attacker’s Mythic server and the compromised VM.  
 - Set up persistence mechanisms for continued access to the VM, even after reboots.  
-🖼️ [Insert screenshots of active C2 connection and persistence settings]
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986978_w.jpg)
 
 ---
 
