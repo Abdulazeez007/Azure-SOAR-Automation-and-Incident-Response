@@ -52,7 +52,7 @@ This project was undertaken to simulate advanced cyber threats using the Mythic 
 - Onboarded the VM to Microsoft Defender for Endpoint using Intune.  
 - Configured firewall settings to allow all inbound network traffic to facilitate the simulation.  
 - Deployed a decoy file named AdminPass.txt in the target VM for threat detection.  
-🖼️ [Insert screenshots of Mythic C2 configuration, VM setup, and decoy file deployment]
+🖼️ ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570396_w.jpg)
 
 ## Here are the steps to Deploy a Mythic Command and Control Server 🚀:
 
