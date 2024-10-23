@@ -54,9 +54,9 @@ This project was undertaken to simulate advanced cyber threats using the Mythic 
 - Deployed a decoy file named AdminPass.txt in the target VM for threat detection.  
 🖼️ [Insert screenshots of Mythic C2 configuration, VM setup, and decoy file deployment]
 
-### Here are the steps to Deploy a Mythic Command and Control Server 🚀:
+## Here are the steps to Deploy a Mythic Command and Control Server 🚀:
 
-### 1️⃣ Choose Your Cloud Provider (Azure or Vultr Example)
+### A. Choose Your Cloud Provider (Azure or Vultr Example)
 - Head to your chosen cloud provider.
 - For this guide, we're using **Vultr**.
 - Deploy a new server by selecting **Deploy New Server**.
@@ -73,7 +73,7 @@ This project was undertaken to simulate advanced cyber threats using the Mythic 
 
 ---
 
-### 2️⃣ Connect to Your Server 🔐
+### B. Connect to Your Server 🔐
 - Once the server is up, SSH into it via **PowerShell** (Windows) or your terminal (Linux/Mac).
   
 ```bash
@@ -83,7 +83,7 @@ ssh root@<your-server-ip>
 
 ---
 
-### 3️⃣ Update & Upgrade Your Server 🔄
+### C. Update & Upgrade Your Server 🔄
 - Run these commands to ensure your system is fully updated:
 
 ```bash
@@ -92,7 +92,7 @@ apt-get update && apt-get upgrade -y
 
 ---
 
-### 4️⃣ Install Docker Compose & Make ⚙️
+### D. Install Docker Compose & Make ⚙️
 - Install **Docker Compose**:
 
 ```bash
@@ -107,7 +107,7 @@ apt install make
 
 ---
 
-### 5️⃣ Clone the Mythic Repository 📁
+### E. Clone the Mythic Repository 📁
 - Clone Mythic from GitHub:
 
 ```bash
@@ -135,7 +135,7 @@ systemctl status docker
 
 ---
 
-### 6️⃣ Start Mythic 💻
+### F. Start Mythic 💻
 - To start Mythic, run:
 
 ```bash
@@ -150,13 +150,13 @@ make
 
 ---
 
-### 7️⃣ Configure Your Firewall 🔒
+### G. Configure Your Firewall 🔒
 - Head back to **Vultr** to set up a firewall.
 - Create a **Firewall Group** and allow only trusted IPs (like your own).
 
 ---
 
-### 8️⃣ Access the Mythic Web GUI 🌐
+### H. Access the Mythic Web GUI 🌐
 - Open your browser and navigate to the Mythic Web GUI:
 
 ```url
