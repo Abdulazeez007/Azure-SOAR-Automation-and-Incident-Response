@@ -202,10 +202,15 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 
 ### 2.4 **💻 Payload Creation Deployment and Execution**  
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6010098396611854209_w.jpg)
+
+#### Payload Created
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570395_w.jpg)
+
+#### Payload Deployed
 - Generated a payload named `svcanonymous.exe` using Mythic C2, designed to establish a secure connection back to the C2 server.  
 - Downloaded the payload onto the target VM’s whitelisted path.  
   ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986973_w.jpg)
-- Executed the payload using PowerShell IEX to activate the C2 connection. 
+#### Payload - Executed using PowerShell IEX to activate the C2 connection. 
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986974_w.jpg)
 ---
 
