@@ -188,7 +188,8 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 
  ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Mapping-a-Simulated-Attack-Path/photo_6010098396611854206_w.jpg)
 - Used a Kali Linux machine to initiate a brute-force attack targeting the Windows VM's RDP using a custom wordlist (brute.txt).  
-- Successfully cracked the credentials and accessed the target VM via XFREERDP.  
+- Successfully cracked the credentials and accessed the target VM via XFREERDP.
+  
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986956_y.jpg)
 
 ---
@@ -203,31 +204,40 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 ---
 
 ### 2.4 **💻 Payload Creation Deployment and Execution**  
+
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6010098396611854209_w.jpg)
 
 #### Payload Created
+
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570395_w.jpg)
 
 #### Payload Deployed
 - Generated a payload named `svcanonymous.exe` using Mythic C2, designed to establish a secure connection back to the C2 server.  
-- Downloaded the payload onto the target VM’s whitelisted path.  
+- Downloaded the payload onto the target VM’s whitelisted path.
+  
   ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986973_w.jpg)
+  
 #### Payload - Executed using PowerShell IEX to activate the C2 connection. 
+
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986974_w.jpg)
 ---
 
 ### 2.5 **📡 Command and Control (C2) Operation**  
+
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6010098396611854210_w.jpg)
 - Established a C2 connection between the attacker’s Mythic server and the compromised VM.  
-- Set up persistence mechanisms for continued access to the VM, even after reboots.  
+- Set up persistence mechanisms for continued access to the VM, even after reboots.
+  
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6039540521979986978_w.jpg)
 
 ---
 
 ### 2.6 **📥 File Exfiltration**  
+
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6010098396611854211_w.jpg)
 - Located the decoy file `AdminPass.txt` on the target VM.  
-- Successfully exfiltrated the file back to the attacker’s Mythic server, simulating data theft.  
+- Successfully exfiltrated the file back to the attacker’s Mythic server, simulating data theft.
+  
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Stage%202/photo_6041792321793671784_w.jpg)
 
 ---
@@ -245,19 +255,23 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 
 ### 3.2 **👥 User & Group Management**  
 - Created user accounts and organized them into a SecOps Group for incident management.
+  
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570372_w.jpg)
   
-- Implemented role-based access control (RBAC) to assign the Microsoft Sentinel Contributor role to the SOC Team Lead.  
+- Implemented role-based access control (RBAC) to assign the Microsoft Sentinel Contributor role to the SOC Team Lead.
+  
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570387_w.jpg)
 
 ---
 
 ### 3.3 **🤖 Automation & Incident Response**  
+
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570390_w.jpg)
 - Built an automation rule in Sentinel to:  
    - Trigger high-priority alerts.  
    - Assign incidents to the SOC Team Lead.  
-   - Run a playbook that sends email notifications to the SOC Lead and SOC Manager.  
+   - Run a playbook that sends email notifications to the SOC Lead and SOC Manager.
+     
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6035328477617570393_w.jpg)
 
 ---
@@ -266,26 +280,30 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 
 ### 4.1 **📝 Verification and Initial Investigation**  
 #### Received an alert for Mythic C2 detection.
+
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357181_w.jpg)
   
 - Investigated the alert in Microsoft Sentinel, reviewing evidence such as:  
    - Suspicious file `svcanonymous.exe`.  
    - Mode of entry (brute-force attack).  
-   - IPs involved in the attack.  
+   - IPs involved in the attack.
+     
 ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_5821292175445574894_w.jpg)
 
 ---
 
 ### 4.2 **🖥️ Affected Assets & Isolation**  
 - Isolated the compromised VM using Microsoft Defender for Endpoint.  
-- Prevented lateral movement and further network access.  
+- Prevented lateral movement and further network access.
+  
  ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357186_w.jpg)
 
 ---
 
 ### 4.3 **🛠️ Live Response & File Analysis**  
 - Utilized MDE's Advanced Live Response to access the compromised machine.  
-- Deleted the malicious file and ran a detailed analysis in a sandbox environment.  
+- Deleted the malicious file and ran a detailed analysis in a sandbox environment.
+  
  ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_5821292175445574896_w.jpg)
 
 ---
@@ -298,11 +316,18 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 ---
 
 ### 4.5 **🔐 Preventive Measures**  
-- Blocked identified IP addresses and malicious SHA1 hashes.  
-- Updated firewall rules to restrict unauthorized access.  
-- Enforced stricter password policies and disabled unsigned script execution.  
-![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357179_w.jpg)
+- Blocked identified IP addresses and malicious SHA1 hashes.
 
+  ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357179_w.jpg)
+
+  
+- Updated firewall rules to restrict unauthorized access.
+
+  https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357208_w.jpg
+  
+- Enforced stricter password policies and disabled unsigned script execution.  
+
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357204_w.jpg)
 ---
 
 ## 5️⃣ **Conclusion and Key Takeaways**  
