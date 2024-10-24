@@ -293,7 +293,7 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 ### 4.4 **📈 Incident Closure & Reporting**  
 - Released the isolated VM after remediation.  
 - Documented the incident for internal review and future training.  
-🖼️ [Insert sample incident report or screenshots of reporting in Microsoft Sentinel]
+ ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_5821292175445574897_w.jpg)
 
 ---
 
@@ -301,7 +301,7 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 - Blocked identified IP addresses and malicious SHA1 hashes.  
 - Updated firewall rules to restrict unauthorized access.  
 - Enforced stricter password policies and disabled unsigned script execution.  
-🖼️ [Insert screenshots of preventive measures and updated configurations]
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357179_w.jpg)
 
 ---
 
