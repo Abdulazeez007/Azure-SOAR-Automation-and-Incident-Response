@@ -266,27 +266,27 @@ Once logged in, you’ll see the **Mythic dashboard**. Here, you can manage agen
 
 ### 4.1 **📝 Verification and Initial Investigation**  
 #### Received an alert for Mythic C2 detection.
-![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/photo_6037580277431255549_w.jpg)
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357181_w.jpg)
   
 - Investigated the alert in Microsoft Sentinel, reviewing evidence such as:  
    - Suspicious file `svcanonymous.exe`.  
    - Mode of entry (brute-force attack).  
    - IPs involved in the attack.  
-![SOC]()
+![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_5821292175445574894_w.jpg)
 
 ---
 
 ### 4.2 **🖥️ Affected Assets & Isolation**  
 - Isolated the compromised VM using Microsoft Defender for Endpoint.  
 - Prevented lateral movement and further network access.  
-🖼️ [Insert screenshots of isolation process in MDE]
+ ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_6044044121607357186_w.jpg)
 
 ---
 
 ### 4.3 **🛠️ Live Response & File Analysis**  
 - Utilized MDE's Advanced Live Response to access the compromised machine.  
 - Deleted the malicious file and ran a detailed analysis in a sandbox environment.  
-🖼️ [Insert screenshots of live response session and sandbox analysis results]
+ ![SOC](https://github.com/Virus192/Azure-SOAR-Automation-and-Incident-Response/blob/main/Images/Brute/Upload/photo_5821292175445574896_w.jpg)
 
 ---
 
